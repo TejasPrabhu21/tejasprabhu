@@ -55,3 +55,22 @@ allSections.forEach(function (section) {
   sectionObserver.observe(section);
   section.classList.add('section--hidden');
 });
+
+///////////////Responsiveness
+//Navbar Hamburger
+const bars = document.querySelector('.hamburger');
+const menu = document.querySelector('.nav_list');
+if(window.innerWidth < 480){
+  console.log('width 480');
+  bars.classList.remove('hidden');
+}
+
+bars.addEventListener('click',function(){
+  console.log(menu);
+  menu.classList.toggle('active');
+  bars.style.transform  = "rotateX('90')";
+});
+
+menu.addEventListener('click',function(){
+  menu.classList.toggle('active');
+});
