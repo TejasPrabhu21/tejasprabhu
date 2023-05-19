@@ -236,9 +236,9 @@
         </div>
 
         <div class="contact__form">
-            <form onsubmit="sendEmail()">
+            <form onsubmit="sendEmail();reset(); return false;">
                 <div class="">
-                    <input type="text" placeholder="Your Name" class="input" id="names" name="name" required>
+                    <input type="text" placeholder="Your Name" class="input" id="name" name="name" required>
                 </div>
                 <div class="">
                     <input type="email" placeholder="Your Email" class="input" id="email" name="email" required>
@@ -251,9 +251,8 @@
                         class="input textarea"></textarea>
                 </div>
                 <div class="">
-                    <button type="submit" class="btn">Send Message</button>
+                    <button type="submit" class="btn" id="myButton">Send Message</button>
                 </div>
-
             </form>
         </div>
     </section>
@@ -293,8 +292,32 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
     <script src="contact.js"></script>
+
+    <script>
+        function sendEmail() {
+
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let subject = document.getElementById('subject').value;
+            let message = document.getElementById('message').value;
+
+            console.log(name, email, subject, message);
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "tejasprabhukcontact@gmail.com",
+                Password: "E7BC23204976055411048DAF43C287B45F0C",
+                To: 'tejasprabhu21@gmail.com',
+                From: "tejasprabhukcontact@gmail.com",
+                Subject: "Mail from Porfolio contact form.",
+                Body: "Name: "+name+"<br/> E-mail: "+ email+"<br/>Subject: "+subject+"<br/>Message: "+message
+            }).then(
+                message => alert(message)
+            );
+        }
+    </script>
 </body>
 
 </html>

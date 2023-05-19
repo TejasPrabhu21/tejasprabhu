@@ -1,25 +1,12 @@
 // ////////////Contact me section smtp implementation
-// const namess = document.querySelector('#names');
+// document.getElementById("myButton").addEventListener("click", function(event){
+//     event.preventDefault();
+//   });
 
-// var names = namess.val();
-// var email = $('#email').val();
-// var phone = $('#phone').val();
-// var subject = $('#subject').val();
-// var message = $('#message').val();
+// var form = document.getElementById("myButton");
+// function handleForm(event) { event.preventDefault(); } 
+// form.addEventListener('submit', handleForm);
 
-// console.log(names,email,phone,subject,message);
-// function sendEmail() {
-//     Email.send({
-//         Host: "smtp.elasticemail.com",
-//         Username: "username",
-//         Password: "password",
-//         To: 'them@website.com',
-//         From: "you@isp.com",
-//         Subject: "This is the subject",
-//         Body: "And this is the body"
-//     }).then(
-//         message => alert(message)
-//     );
-// }
+
 
 // window.alert("Message Sent");
