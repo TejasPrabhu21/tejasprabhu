@@ -316,7 +316,7 @@ section {
 
 .info__links {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     list-style: none;
 }
 
@@ -348,7 +348,7 @@ section {
     }
 
     .info__item {
-        padding: 1;
+        /* padding: 1; */
         max-width: 90%;
     }
 
@@ -361,14 +361,14 @@ section {
 /* /////////////// Projects Section /////////////////// */
 .cards__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     align-items: center;
     row-gap: 1rem;
     column-gap: 1rem;
 }
 
 .card {
-    /* height: min-content; */
+    /* height: 500px; */
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -431,7 +431,7 @@ section {
 
 .icon {
     font-size: 1.5rem;
-    transform: translateY(5px);
+    padding-right: 5px;
 }
 
 .contact__form {
@@ -499,7 +499,7 @@ section {
 
 .link>a {
     color: #495057;
-    padding: 0 2rem;
+    padding: 0 2rem 0 0;
     font-size: 1.5rem;
 }
 
